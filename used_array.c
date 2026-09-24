@@ -1,6 +1,8 @@
 # define SIZE 3
 
 // the used array keeps track of which number is used and which number to be transferred to the perm
+// k is number of items fixed in perm array
+// n is length of perm array 
 void printPerms(int *perm, int * used, int k, int n){
     
     if (k == n){
@@ -28,5 +30,5 @@ int main (void){
     // tracking which index is used
     int used[SIZE] = {0};
 
-    printperms
+    printperms(perm, used, 0, SIZE);
 }
