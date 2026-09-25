@@ -26,9 +26,20 @@ typedef struct constraint{
 monster monsters [12];
 constraint constraints [30];
 
+int recursivePositionCheck (int perm[], int monsterCount, int monstersIndex, int permIndex ){
+    // Checks if the current monster stores at perm[]
+    if (perm[permIndex] == monstersIndex){
+        return permIndex;
+    }
+    return recursivePositionCheck(perm, monsterCount, monstersIndex, permIndex + 1);
+}
 
-void constraint_permutation(int perm[], int used[], int k, int monsterCount){
-    
+
+int constraint_permutation(int perm[], int used[], int k, int monsterCount){
+    // main1 checks at base case 
+    if (k == monsterCount){
+        if ()
+    }
 
 }
 
@@ -40,7 +51,7 @@ int main (void){
 
     for (int i = 0; i < monsterCount; i++){
         char tempName[MAX_MONSTER_NAME_LEN + 1];
-        scanf("%30s, %30s", tempName, monsters[i].element);
+        scanf("%s, %s", tempName, monsters[i].element);
         // Mallocing string space for each monster name
         monsters[i].name = malloc((strlen(tempName) + 1)* sizeof(char));
         strcpy(monsters[i].name, tempName);

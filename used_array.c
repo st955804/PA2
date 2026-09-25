@@ -3,8 +3,16 @@
 // the used array keeps track of which number is used and which number to be transferred to the perm
 // k is number of items fixed in perm array
 // n is length of perm array 
+
+
+// 20:00 for video.
+
+
+
+
 void printPerms(int *perm, int * used, int k, int n){
-    
+    // base case
+    // (just got 1 permutation)
     if (k == n){
         print(perm, n);
         return;
